@@ -1,0 +1,171 @@
+body {
+    background-color: #FFFFFF;
+}
+
+.collapse {
+    display: inline-flex;
+    background-color: #008cc8;
+}
+
+.nav {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.velo-montreal-btn {
+    font-size: 175%;
+    color: #FFFFFF;
+}
+
+.accueil-btn{
+    font-size: 125%;
+    background-color: #015E86;
+    color: #FFFFFF;
+}
+
+.fa-globe{
+    color: #FFFFFF;
+}
+
+.nav > li > a:hover{
+    background-color:#015E86;
+    color: #FFFFFF;
+}
+
+/* Green buttons */
+.menu {
+    margin-top: 20px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.nav-tabs > li > a{
+    color: #008cc8;
+    /* To enlarge the buttons */
+    padding-top: 15px !important; 
+    padding-bottom: 15px !important;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus{
+    background-color: #00b066;
+    color: white;
+    outline:0; /* To remove the dotted outline */
+    /* To enlarge the buttons */
+    padding-top: 15px !important; 
+    padding-bottom: 15px !important;
+}
+
+.nav-tabs > li > a:hover{
+    background-color: #008cc8;
+    color: white;
+    /* To enlarge the buttons */
+    padding-top: 15px !important; 
+    padding-bottom: 15px !important;
+}
+
+#map {
+    height: 50%;
+}
+
+.station-selector-wrapper{
+    display: inline-flex;
+    width:100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color:008cc8;
+}
+
+/* section to select the station */
+.station-selector{
+    width: 50%;
+    padding-left: 60px;
+    padding-right: 60px;
+    border-right: 1px solid #D1CECE; /* This is the line separating the two div    */
+}
+
+/* section with the station status table */
+.station-status{
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+    
+}
+.station-status h3{
+    margin-top: 0px;
+}
+
+.ui-autocomplete {
+    max-height: 25% !important;
+    overflow-y: relative;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+.ui-menu-item .ui-menu-item-wrapper:hover
+{
+    border: none !important;
+    background-color: #e4e4e4;
+    color: black;
+}
+
+/* Area where the station name is being displayed */
+.station-name {
+    height:40px; 
+    width: 100%; 
+    overflow: auto;
+    font-size: large;
+    color: black;
+}
+
+#statusTable{
+    /* Disabling text selection in the table */
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+
+tr{
+    height: 30px;
+}
+
+td{
+    width: 25% !important;
+    height : 61px !important;
+    vertical-align: middle !important;
+}
+table{
+    width:100% !important;
+}
+
+thead{
+    background-color: #008cc8;
+}
+
+/* Case with text in white */
+.tdWithWhiteColor{
+    color: white;
+}
+/* Case with a border */
+.tdWithBorder{
+    border-left: 1px solid #D1CECE;
+}
+
+/* The text in the table to have the color around the text */
+.tableParagraph {
+    background: #898989;
+    padding: 5px;
+    display: inline-block;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -o-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.title-state {
+    margin: auto;
+    width: 80%;
+}

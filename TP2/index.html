@@ -1,0 +1,150 @@
+<html>
+    <head>
+         <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+        <!-- jQuery -->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- DataTables -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.css"/>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.16/datatables.min.js"></script>
+        <!-- CSS sheet -->
+        <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="./style.css">
+
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+
+        <title>Vélo Montréal</title>
+    </head>
+    
+    <!-- Across Navigation Bar -->
+    <body>
+        <!-- header blue line -->
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="./index.html" class="velo-montreal-btn">Vélo Montréal</a>
+                </li>
+                <li><a href="./index.html" class="accueil-btn">Accueil</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="fa fa-globe fa-2x" aria-hidden="true"></a>
+            </ul>
+        </div>
+        <!-- The green buttons -->
+        <div class="menu">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#stations-map">Carte des stations</a></li>
+                <li><a data-toggle="tab" href="#stations-list">Liste des stations</a></li>
+            </ul>
+        </div>
+        <!-- PAGES CONTENT -->
+        <div class="tab-content">
+            <!-- STATIONS MAP PAGE -->
+            <div id="stations-map" class="tab-pane fade in active">
+              <!-- This section contains the station selector and status -->
+              <div class="station-selector-wrapper">
+
+                <!-- This is the section where you select your station -->
+                <div class="station-selector">
+                    <div class="form-group">
+                        <!-- Input form to enter the station name -->
+                        <input type="text" class="form-control" id="stations-input">
+                        <div class="ui-widget" style="margin-top:2em; font-family:Arial">
+                            <h3>Localisation:</h3>
+                            <hr>
+                            <!-- Show the current station name -->
+                            <div id="selected-station" class="station-name"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- This is the section where the station status is displayed -->
+                <div class="station-status">
+                    <h3>État de la station de vélos</h3>
+                    <!-- The status table -->
+                    <table id="statusTable" class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ID Station</td>
+                                <td class="tdWithWhiteColor"><p id="idValue" class="tableParagraph">-</p></td>
+                                <td class ="tdWithBorder">Vélos Disponibles</td>
+                                <td class="tdWithWhiteColor"><p id="availableBikesValue" class="tableParagraph">-</p></td>
+                            </tr>
+                            <tr>
+                                <td>Bloquée</td>
+                                <td class="tdWithWhiteColor"><p id="isBlockedValue" class="tableParagraph">-</p></td>
+                                <td class ="tdWithBorder">Bornes disponibles</td>
+                                <td class="tdWithWhiteColor"><p id="availableTerminalsValue" class="tableParagraph">-</p></td>
+                            </tr>
+                            <tr>
+                                <td>Suspendue</td>
+                                <td class="tdWithWhiteColor"><p id="isSuspendedValue" class="tableParagraph">-</p></td>
+                                <td class ="tdWithBorder">Vélos indisponibles</td>
+                                <td class="tdWithWhiteColor"><p id="unavailableBikesValue" class="tableParagraph">-</p></td>
+                            </tr>
+                            <tr>
+                                <td>Hors service</td>
+                                <td class="tdWithWhiteColor"><p id="isOutOfServiceValue" class="tableParagraph">-</p></td>
+                                <td class ="tdWithBorder">Bornes Indisponibles</td>
+                                <td class="tdWithWhiteColor"><p id="unavailableTerminalsValue" class="tableParagraph">-</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+              </div>
+              <!-- This is the map -->
+              <div id="map"></div>              
+            </div>
+
+            <!-- STATIONS LIST PAGE -->
+            <div id="stations-list" class="tab-pane fade">
+                <div class = "title-state">
+                    <h3>État de toutes les stations de vélos</h3>
+                    <!-- Dynamic table with stations list -->
+                    <table id="table-stations-list" class="display" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nom Station</th>
+                                <th>Vélos disponibles</th>
+                                <th>Bornes disponibles</th>
+                                <th>État bloqué</th>
+                                <th>État suspendu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ID</td>
+                                <td>Nom Station</td>
+                                <td>Vélos disponibles</td>
+                                <td>Bornes disponibles</td>
+                                <td>État bloqué</td>
+                                <td>État suspendu</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <script src="main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjonwWBWoE1W6L8sU7KPl7zkRLSaPNC2o&callback=initMap" async defer></script>
+      
+    </body>
+
+</html>

@@ -1,0 +1,26 @@
+body {
+    background: #eeeeee;
+}
+
+table {
+    position: relative;
+    top: 50px;
+    left: 40px;
+}
+
+.table-title {
+    padding-right: 50px;
+}
+
+.details-table {
+    padding-right: 30px;
+}
+
+td {
+    width: 60px;
+}
+
+th {
+    font-weight: normal;
+    text-align: left;
+}

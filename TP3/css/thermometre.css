@@ -1,0 +1,40 @@
+#thermometre {
+    border-width: 1px;
+    height: 300px;
+    width: 20px;
+    margin: 0;
+}
+
+#thermometre-fill {
+    position: absolute;
+    bottom: 0;
+    height: 180px;
+    width: 20px;
+    margin: 0;
+    background: red;
+}
+
+#thermometre-title {
+    position: absolute;
+    top: 320px;
+    left: -20px;
+}
+
+#tdValeurInterieure {
+    position: absolute;
+    transform: rotate(90deg);
+    bottom: 50%;
+    left: 1px;
+    color: white;
+}
+
+#actif {
+    background: white;
+}
+
+.thermometre-wrapper {
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 200px;
+}

@@ -1,0 +1,132 @@
+.wrapper {
+    display: -moz-inline-box;
+    margin: 100px;
+}
+
+.value-1 {
+    position: absolute;
+    margin : 0;
+    top: 16%;
+}
+
+.value-2 {
+    position: absolute;
+    margin: 0;
+    top: 36%;
+}
+
+.value-3 {
+    position: absolute;
+    margin: 0;
+    top: 56%;
+}
+
+.value-4 {
+    position: absolute;
+    margin: 0;
+    top: 76%;
+}
+
+.value-5 {
+    position: absolute;
+    margin: 0;
+    top: 96%;
+}
+
+.marker-1 {
+    position: absolute;
+    margin : 0;
+    top: 15.5%;
+    color: rgb(168, 168, 168);
+}
+
+.marker-2 {
+    position: absolute;
+    margin: 0;
+    top: 35.5%;
+    color: rgb(168, 168, 168);
+}
+
+.marker-3 {
+    position: absolute;
+    margin: 0;
+    top: 55.5%;
+    color: rgb(168, 168, 168);
+}
+
+.marker-4 {
+    position: absolute;
+    margin: 0;
+    top: 75.5%;
+    color: rgb(168, 168, 168);
+}
+
+.marker-5 {
+    position: absolute;
+    margin: 0;
+    top: 95.5%;
+    color: rgb(168, 168, 168);
+}
+
+.thermostat-wrapper {
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 300px;
+    margin-left: 50px;
+}
+
+.thermostat-values {
+    margin-left: 8px;
+    height: 100%;
+}
+
+.thermostat-pips {
+    margin-left: 8px;
+    height: 100%;
+}
+
+#thermostat {
+    height: 100%;
+    width: 5px;
+    margin-left: 50px;
+    background: -moz-linear-gradient(0deg, #dbdbdb, #ffffff);
+    border-radius: 0;
+}
+
+#thermostat-fill {
+    position: absolute;
+    bottom: 0;
+    height: 180px;
+    width: 6px;
+    margin-left: 50px;
+    background: -moz-linear-gradient(0deg, #ffffff, #a4bacd);
+}
+
+#thermostat .ui-slider-handle {
+    display: relative;
+    height: 16px;
+    width: 14px;
+    background: -moz-linear-gradient(0deg, #a4bacd, #a4bacd);
+    transform: translate(0, -6px);
+    border: none;
+}
+
+#thermostat .ui-slider-handle::after {
+    content: '';
+    position: inherit;
+    height: 0;
+    width: 0;
+    border-left: 11px solid #a4bacd;
+    border-right: 0px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    background-color: transparent;
+    left: 10px;
+}
+
+#thermostat-title {
+    position: absolute;
+    top: 320px;
+    left: 30px;
+}
